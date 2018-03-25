@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp
+"my_homework_0110\startup_stm32f407xx.o"
+"my_homework_0110\stm32f4xx_hal_flash_ramfunc.o"
+"my_homework_0110\stm32f4xx_hal_dma.o"
+"my_homework_0110\stm32f4xx_hal_dma_ex.o"
+"my_homework_0110\stm32f4xx_hal_flash.o"
+"my_homework_0110\stm32f4xx_hal_rcc.o"
+"my_homework_0110\stm32f4xx_hal_flash_ex.o"
+"my_homework_0110\stm32f4xx_hal_gpio.o"
+"my_homework_0110\stm32f4xx_hal.o"
+"my_homework_0110\stm32f4xx_hal_tim.o"
+"my_homework_0110\stm32f4xx_hal_tim_ex.o"
+"my_homework_0110\stm32f4xx_hal_rcc_ex.o"
+"my_homework_0110\stm32f4xx_hal_adc.o"
+"my_homework_0110\stm32f4xx_hal_adc_ex.o"
+"my_homework_0110\stm32f4xx_hal_pwr.o"
+"my_homework_0110\stm32f4xx_hal_pwr_ex.o"
+"my_homework_0110\stm32f4xx_hal_cortex.o"
+"my_homework_0110\adc.o"
+"my_homework_0110\gpio.o"
+"my_homework_0110\stm32f4xx_hal_msp.o"
+"my_homework_0110\stm32f4xx_it.o"
+"my_homework_0110\main.o"
+"my_homework_0110\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "My_homeWork_0110\My_homeWork_0110.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "My_homeWork_0110.map" -o My_homeWork_0110\My_homeWork_0110.axf
