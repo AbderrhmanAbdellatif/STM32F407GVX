@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp
+"quiz0_1\startup_stm32f407xx.o"
+"quiz0_1\system_stm32f4xx.o"
+"quiz0_1\main.o"
+"quiz0_1\stm32f4xx_it.o"
+"quiz0_1\stm32f4xx_hal_msp.o"
+"quiz0_1\adc.o"
+"quiz0_1\gpio.o"
+"quiz0_1\stm32f4xx_hal_rcc_ex.o"
+"quiz0_1\stm32f4xx_hal_pwr.o"
+"quiz0_1\stm32f4xx_hal_dma_ex.o"
+"quiz0_1\stm32f4xx_hal_tim_ex.o"
+"quiz0_1\stm32f4xx_hal_pwr_ex.o"
+"quiz0_1\stm32f4xx_hal_adc.o"
+"quiz0_1\stm32f4xx_hal_flash_ramfunc.o"
+"quiz0_1\stm32f4xx_hal_dma.o"
+"quiz0_1\stm32f4xx_hal_flash_ex.o"
+"quiz0_1\stm32f4xx_hal_gpio.o"
+"quiz0_1\stm32f4xx_hal_tim.o"
+"quiz0_1\stm32f4xx_hal_flash.o"
+"quiz0_1\stm32f4xx_hal.o"
+"quiz0_1\stm32f4xx_hal_adc_ex.o"
+"quiz0_1\stm32f4xx_hal_cortex.o"
+"quiz0_1\stm32f4xx_hal_rcc.o"
+--library_type=microlib --strict --scatter "QUIZ0_1\QUIZ0_1.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "QUIZ0_1.map" -o QUIZ0_1\QUIZ0_1.axf
