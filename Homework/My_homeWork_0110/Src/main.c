@@ -16,37 +16,6 @@ void SystemClock_Config(void);
 		
 	}
 
-//	void EXTI1_IRQHandler(void)
-//	{
-//		for(int i=0;i<1000000;i++);
-//		HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_1);
-//    HAL_ADC_Start_IT(&hadc1);
-//	 if(adc_value>255){
-//		HAL_GPIO_WritePin(Red_Led_GPIO_Port,Red_Led_Pin,GPIO_PIN_SET);
-//		HAL_GPIO_WritePin(Blue_led_GPIO_Port,Blue_led_Pin,GPIO_PIN_RESET);
-//		HAL_GPIO_WritePin(orange_led_GPIO_Port,orange_led_Pin,GPIO_PIN_RESET);
-//		HAL_GPIO_WritePin(Green_led_GPIO_Port,Green_led_Pin,GPIO_PIN_RESET);
-//		HAL_Delay(500);
-//		}else if (adc_value>256 && adc_value<511){
-//		HAL_GPIO_WritePin(Red_Led_GPIO_Port,Red_Led_Pin,GPIO_PIN_RESET);
-//		HAL_GPIO_WritePin(Blue_led_GPIO_Port,Blue_led_Pin,GPIO_PIN_RESET);
-//		HAL_GPIO_WritePin(orange_led_GPIO_Port,orange_led_Pin,GPIO_PIN_SET);
-//		HAL_GPIO_WritePin(Green_led_GPIO_Port,Green_led_Pin,GPIO_PIN_RESET);
-//		HAL_Delay(500);
-//		}else if (adc_value>512 && adc_value<767){
-//		HAL_GPIO_WritePin(Red_Led_GPIO_Port,Red_Led_Pin,GPIO_PIN_RESET);
-//		HAL_GPIO_WritePin(Blue_led_GPIO_Port,Blue_led_Pin,GPIO_PIN_SET);
-//		HAL_GPIO_WritePin(orange_led_GPIO_Port,orange_led_Pin,GPIO_PIN_RESET);
-//		HAL_GPIO_WritePin(Green_led_GPIO_Port,Green_led_Pin,GPIO_PIN_RESET);
-//		HAL_Delay(500);
-//		}else if (adc_value>767){
-//		HAL_GPIO_WritePin(Red_Led_GPIO_Port,Red_Led_Pin,GPIO_PIN_RESET);
-//		HAL_GPIO_WritePin(Blue_led_GPIO_Port,Blue_led_Pin,GPIO_PIN_RESET);
-//		HAL_GPIO_WritePin(orange_led_GPIO_Port,orange_led_Pin,GPIO_PIN_RESET);
-//		HAL_GPIO_WritePin(Green_led_GPIO_Port,Green_led_Pin,GPIO_PIN_SET);
-//		HAL_Delay(500);
-//		}
-//} 
 int main(void)
 {
 HAL_Init();
