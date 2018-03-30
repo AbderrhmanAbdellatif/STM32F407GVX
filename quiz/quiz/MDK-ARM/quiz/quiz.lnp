@@ -1,0 +1,28 @@
+--cpu=Cortex-M4.fp
+"quiz\startup_stm32f407xx.o"
+"quiz\gpio.o"
+"quiz\adc.o"
+"quiz\main.o"
+"quiz\stm32f4xx_hal_msp.o"
+"quiz\stm32f4xx_it.o"
+"quiz\stm32f4xx_hal_rcc.o"
+"quiz\stm32f4xx_hal_adc_ex.o"
+"quiz\stm32f4xx_hal_tim.o"
+"quiz\stm32f4xx_hal_flash_ramfunc.o"
+"quiz\stm32f4xx_hal_tim_ex.o"
+"quiz\stm32f4xx_hal_adc.o"
+"quiz\stm32f4xx_hal_dma_ex.o"
+"quiz\stm32f4xx_hal_gpio.o"
+"quiz\stm32f4xx_hal_rcc_ex.o"
+"quiz\stm32f4xx_hal_pwr.o"
+"quiz\stm32f4xx_hal.o"
+"quiz\stm32f4xx_hal_flash.o"
+"quiz\stm32f4xx_hal_dma.o"
+"quiz\stm32f4xx_hal_flash_ex.o"
+"quiz\stm32f4xx_hal_pwr_ex.o"
+"quiz\stm32f4xx_hal_cortex.o"
+"quiz\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "quiz\quiz.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "quiz.map" -o quiz\quiz.axf
