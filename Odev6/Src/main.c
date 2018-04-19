@@ -45,23 +45,23 @@ int main(void)
   MX_USART2_UART_Init();
   while (1)
   {
-  if(t_data<256){
+  if(r_data<256){
 	  HAL_GPIO_WritePin(GPIOD, Red_Pin , GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOD, Orange_Pin|Blue_Pin|Green_Pin , GPIO_PIN_RESET);
 	}
-	else if(t_data<512){
+	else if(r_data<512){
 	  HAL_GPIO_WritePin(GPIOD, Orange_Pin , GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOD, Red_Pin|Blue_Pin|Green_Pin , GPIO_PIN_RESET);
 	}
-	else if(t_data<768){
+	else if(r_data<768){
 	  HAL_GPIO_WritePin(GPIOD, Blue_Pin , GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOD, Orange_Pin|Red_Pin|Green_Pin , GPIO_PIN_RESET);
 	}
-	else if(t_data<1001){
+	else if(r_data<1001){
 	  HAL_GPIO_WritePin(GPIOD, Green_Pin , GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOD, Orange_Pin|Blue_Pin|Red_Pin , GPIO_PIN_RESET);
 	}
-	else if(t_data>1000){ 
+	else if(r_data>1000){ 
 	  HAL_GPIO_WritePin(GPIOD, Orange_Pin|Blue_Pin|Red_Pin|Green_Pin , GPIO_PIN_SET);
 		HAL_Delay(200);
 		HAL_GPIO_WritePin(GPIOD, Orange_Pin|Blue_Pin|Red_Pin|Green_Pin , GPIO_PIN_RESET);
