@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp
+"deney7\startup_stm32f407xx.o"
+"deney7\system_stm32f4xx.o"
+"deney7\tim.o"
+"deney7\stm32f4xx_it.o"
+"deney7\stm32f4xx_hal_msp.o"
+"deney7\main.o"
+"deney7\gpio.o"
+"deney7\stm32f4xx_hal_tim_ex.o"
+"deney7\stm32f4xx_hal.o"
+"deney7\stm32f4xx_hal_gpio.o"
+"deney7\stm32f4xx_hal_dma_ex.o"
+"deney7\stm32f4xx_hal_flash_ramfunc.o"
+"deney7\stm32f4xx_hal_dma.o"
+"deney7\stm32f4xx_hal_flash_ex.o"
+"deney7\stm32f4xx_hal_tim.o"
+"deney7\stm32f4xx_hal_rcc.o"
+"deney7\stm32f4xx_hal_pwr.o"
+"deney7\stm32f4xx_hal_cortex.o"
+"deney7\stm32f4xx_hal_flash.o"
+"deney7\stm32f4xx_hal_rcc_ex.o"
+"deney7\stm32f4xx_hal_pwr_ex.o"
+--library_type=microlib --strict --scatter "Deney7\Deney7.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Deney7.map" -o Deney7\Deney7.axf
