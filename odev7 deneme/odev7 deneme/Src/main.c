@@ -49,7 +49,7 @@ TIM_HandleTypeDef htim2;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-
+int durum =0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -65,7 +65,7 @@ static void MX_TIM2_Init(void);
   }
 
 /* USER CODE END PFP */
-int durum =0;
+
 /* USER CODE BEGIN 0 */
 void TIM2_IRQHandler(void)
 {
@@ -114,11 +114,11 @@ void TIM2_IRQHandler(void)
 			case 7:
 			reset();
 			HAL_GPIO_WritePin(GPIOD, led1_Pin | led2_Pin | led3_Pin, GPIO_PIN_SET);
-			durum = 0;
 			break;
 					
 		}
 	  durum ++;
+		durum = durum % 8;
 	
   /* USER CODE END TIM2_IRQn 1 */
 }
