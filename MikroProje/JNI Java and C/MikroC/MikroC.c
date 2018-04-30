@@ -1,5 +1,5 @@
 // Native methods implementation of
-#include "Mikroprosesor.h"
+#include "MikroC.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
