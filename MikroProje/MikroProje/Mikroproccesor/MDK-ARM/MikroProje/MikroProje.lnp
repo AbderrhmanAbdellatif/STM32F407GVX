@@ -1,0 +1,27 @@
+--cpu=Cortex-M4.fp
+"mikroproje\startup_stm32f407xx.o"
+"mikroproje\stm32f4xx_it.o"
+"mikroproje\usart.o"
+"mikroproje\stm32f4xx_hal_msp.o"
+"mikroproje\gpio.o"
+"mikroproje\main.o"
+"mikroproje\stm32f4xx_hal_flash_ramfunc.o"
+"mikroproje\stm32f4xx_hal_uart.o"
+"mikroproje\stm32f4xx_hal_tim_ex.o"
+"mikroproje\stm32f4xx_hal_flash.o"
+"mikroproje\stm32f4xx_hal_pwr.o"
+"mikroproje\stm32f4xx_hal_gpio.o"
+"mikroproje\stm32f4xx_hal_rcc.o"
+"mikroproje\stm32f4xx_hal_rcc_ex.o"
+"mikroproje\stm32f4xx_hal_pwr_ex.o"
+"mikroproje\stm32f4xx_hal_flash_ex.o"
+"mikroproje\stm32f4xx_hal_dma.o"
+"mikroproje\stm32f4xx_hal_dma_ex.o"
+"mikroproje\stm32f4xx_hal_cortex.o"
+"mikroproje\stm32f4xx_hal.o"
+"mikroproje\stm32f4xx_hal_tim.o"
+"mikroproje\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "MikroProje\MikroProje.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "MikroProje.map" -o MikroProje\MikroProje.axf
