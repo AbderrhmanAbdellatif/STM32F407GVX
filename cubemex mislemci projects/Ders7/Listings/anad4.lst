@@ -1,0 +1,82 @@
+
+
+
+ARM Macro Assembler    Page 1 Ders7
+
+
+    1 00000000                 TTL              Ders7
+    2 00000000                 AREA             Program,CODE , READONLY
+    3 00000000                 ENTRY
+    4 00000000         
+    5 00000000         ;int sayi =150;
+    6 00000000         ;if(sayi< 50){
+    7 00000000         ;  sayi+=10;
+    8 00000000         ;}else if(sayi ==40){
+    9 00000000         ;  sayi-=40;
+   10 00000000         ;}else{
+   11 00000000         ;  sayi*=90
+   12 00000000         ;}
+   13 00000000         ; >> sayi =13500 = 0x34BC
+   14 00000000 E3A00096        MOV              r0,#150
+   15 00000004 E3A0105A        MOV              r1,#90
+   16 00000008         
+   17 00000008 E3500032        CMP              r0,#50
+   18 0000000C AA000001        BGE              elseif
+   19 00000010 E280000A        ADD              r0,r0,#10
+   20 00000014 EA000004        B                end_if      ; yazmazsam diger e
+                                                            lse e girer
+   21 00000018         elseif
+   22 00000018 E3500028        CMP              r0,#40
+   23 0000001C 1A000001        BNE              _else
+   24 00000020 E2800028        SUB              r0,r0,#-40
+   25 00000024 EA000000        B                end_if
+   26 00000028         _else
+   27 00000028 E0000091        MUL              r0,r1,r0
+   28 0000002C         end_if
+   29 0000002C         
+   30 0000002C                 END
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\anad4.d -o.\objects\anad4.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\C
+MSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 52
+4" --list=.\listings\anad4.lst anad4.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Program 00000000
+
+Symbol: Program
+   Definitions
+      At line 2 in file anad4.s
+   Uses
+      None
+Comment: Program unused
+_else 00000028
+
+Symbol: _else
+   Definitions
+      At line 26 in file anad4.s
+   Uses
+      At line 23 in file anad4.s
+Comment: _else used once
+elseif 00000018
+
+Symbol: elseif
+   Definitions
+      At line 21 in file anad4.s
+   Uses
+      At line 18 in file anad4.s
+Comment: elseif used once
+end_if 0000002C
+
+Symbol: end_if
+   Definitions
+      At line 28 in file anad4.s
+   Uses
+      At line 20 in file anad4.s
+      At line 25 in file anad4.s
+
+4 symbols
+336 symbols in table

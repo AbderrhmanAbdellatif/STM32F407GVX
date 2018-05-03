@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp
+"uygulama7_deneme\startup_stm32f407xx.o"
+"uygulama7_deneme\system_stm32f4xx.o"
+"uygulama7_deneme\stm32f4xx_hal_pwr_ex.o"
+"uygulama7_deneme\stm32f4xx_hal_pwr.o"
+"uygulama7_deneme\stm32f4xx_hal_tim_ex.o"
+"uygulama7_deneme\stm32f4xx_hal_tim.o"
+"uygulama7_deneme\stm32f4xx_hal_flash_ramfunc.o"
+"uygulama7_deneme\stm32f4xx_hal_cortex.o"
+"uygulama7_deneme\stm32f4xx_hal_rcc_ex.o"
+"uygulama7_deneme\stm32f4xx_hal_flash.o"
+"uygulama7_deneme\stm32f4xx_hal_dma_ex.o"
+"uygulama7_deneme\stm32f4xx_hal_gpio.o"
+"uygulama7_deneme\stm32f4xx_hal.o"
+"uygulama7_deneme\stm32f4xx_hal_rcc.o"
+"uygulama7_deneme\stm32f4xx_hal_flash_ex.o"
+"uygulama7_deneme\stm32f4xx_hal_dma.o"
+"uygulama7_deneme\main.o"
+"uygulama7_deneme\stm32f4xx_it.o"
+"uygulama7_deneme\stm32f4xx_hal_msp.o"
+--library_type=microlib --strict --scatter "uygulama7_deneme\uygulama7_deneme.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "uygulama7_deneme.map" -o uygulama7_deneme\uygulama7_deneme.axf

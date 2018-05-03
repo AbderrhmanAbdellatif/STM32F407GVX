@@ -1,0 +1,27 @@
+--cpu=Cortex-M4.fp
+"odevhafta6\startup_stm32f407xx.o"
+"odevhafta6\system_stm32f4xx.o"
+"odevhafta6\stm32f4xx_hal_dma.o"
+"odevhafta6\stm32f4xx_hal_flash_ex.o"
+"odevhafta6\stm32f4xx_hal_dma_ex.o"
+"odevhafta6\stm32f4xx_hal_cortex.o"
+"odevhafta6\stm32f4xx_hal_rcc_ex.o"
+"odevhafta6\stm32f4xx_hal_uart.o"
+"odevhafta6\stm32f4xx_hal_rcc.o"
+"odevhafta6\stm32f4xx_hal_pwr_ex.o"
+"odevhafta6\stm32f4xx_hal_adc.o"
+"odevhafta6\stm32f4xx_hal_flash.o"
+"odevhafta6\stm32f4xx_hal_adc_ex.o"
+"odevhafta6\stm32f4xx_hal_gpio.o"
+"odevhafta6\stm32f4xx_hal_flash_ramfunc.o"
+"odevhafta6\stm32f4xx_hal.o"
+"odevhafta6\stm32f4xx_hal_pwr.o"
+"odevhafta6\stm32f4xx_hal_tim_ex.o"
+"odevhafta6\stm32f4xx_hal_tim.o"
+"odevhafta6\stm32f4xx_hal_msp.o"
+"odevhafta6\stm32f4xx_it.o"
+"odevhafta6\main.o"
+--library_type=microlib --strict --scatter "odevHafta6\odevHafta6.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "odevHafta6.map" -o odevHafta6\odevHafta6.axf

@@ -1,0 +1,61 @@
+
+
+
+ARM Macro Assembler    Page 1 Ders7
+
+
+    1 00000000                 TTL              Ders7
+    2 00000000                 AREA             Program, CODE, READONLY
+    3 00000000                 ENTRY
+    4 00000000         
+    5 00000000 E3A01004        LDR              r1,=4       ;x=4
+    6 00000004 E3A02005        LDR              r2,=5       ;y=5
+    7 00000008 E3A00001        MOV              r0,#1       ;result
+    8 0000000C         
+    9 0000000C E1B02002        MOVS             r2,r2       ;r2=0 (x^0) ise Z=1
+                                                             -> BEQ true -> son
+                                                            agit
+   10 00000010         
+   11 00000010         basadon
+   12 00000010 0A000002        BEQ              sonagit
+   13 00000014 E0000091        MUL              r0,r1,r0    ;result *=x
+   14 00000018 E2522001        SUBS             r2,r2,#1    ;y--
+   15 0000001C EAFFFFFB        B                basadon
+   16 00000020         sonagit
+   17 00000020                 END
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\anad.d -o.\objects\anad.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\CMS
+IS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 524"
+ --list=.\listings\anad.lst anad.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Program 00000000
+
+Symbol: Program
+   Definitions
+      At line 2 in file anad.s
+   Uses
+      None
+Comment: Program unused
+basadon 00000010
+
+Symbol: basadon
+   Definitions
+      At line 11 in file anad.s
+   Uses
+      At line 15 in file anad.s
+Comment: basadon used once
+sonagit 00000020
+
+Symbol: sonagit
+   Definitions
+      At line 16 in file anad.s
+   Uses
+      At line 12 in file anad.s
+Comment: sonagit used once
+3 symbols
+335 symbols in table

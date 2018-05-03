@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp
+"odev2_7segment\startup_stm32f407xx.o"
+"odev2_7segment\system_stm32f4xx.o"
+"odev2_7segment\stm32f4xx_hal_pwr_ex.o"
+"odev2_7segment\stm32f4xx_hal_tim_ex.o"
+"odev2_7segment\stm32f4xx_hal_pwr.o"
+"odev2_7segment\stm32f4xx_hal_rcc_ex.o"
+"odev2_7segment\stm32f4xx_hal_rcc.o"
+"odev2_7segment\stm32f4xx_hal.o"
+"odev2_7segment\stm32f4xx_hal_flash_ex.o"
+"odev2_7segment\stm32f4xx_hal_dma.o"
+"odev2_7segment\stm32f4xx_hal_cortex.o"
+"odev2_7segment\stm32f4xx_hal_flash.o"
+"odev2_7segment\stm32f4xx_hal_gpio.o"
+"odev2_7segment\stm32f4xx_hal_flash_ramfunc.o"
+"odev2_7segment\stm32f4xx_hal_dma_ex.o"
+"odev2_7segment\stm32f4xx_hal_tim.o"
+"odev2_7segment\main.o"
+"odev2_7segment\stm32f4xx_hal_msp.o"
+"odev2_7segment\stm32f4xx_it.o"
+--library_type=microlib --strict --scatter "odev2_7segment\odev2_7segment.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "odev2_7segment.map" -o odev2_7segment\odev2_7segment.axf

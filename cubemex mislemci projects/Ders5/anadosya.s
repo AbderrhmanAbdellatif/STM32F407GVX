@@ -1,0 +1,11 @@
+	TTL Ders5
+	AREA prog ,CODE, READONLY
+	ENTRY
+	
+	LDR r0,=0x70000000
+	LDR r1,=0x30000000
+	ADDS r3,r0,r1
+stop B stop	
+	END
+
+	

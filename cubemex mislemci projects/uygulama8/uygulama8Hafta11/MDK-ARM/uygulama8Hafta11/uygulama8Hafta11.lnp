@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp
+"uygulama8hafta11\startup_stm32f407xx.o"
+"uygulama8hafta11\stm32f4xx_hal_pwr.o"
+"uygulama8hafta11\stm32f4xx_hal_tim_ex.o"
+"uygulama8hafta11\stm32f4xx_hal_tim.o"
+"uygulama8hafta11\stm32f4xx_hal_adc_ex.o"
+"uygulama8hafta11\stm32f4xx_hal_flash.o"
+"uygulama8hafta11\stm32f4xx_hal_rcc.o"
+"uygulama8hafta11\stm32f4xx_hal_flash_ex.o"
+"uygulama8hafta11\stm32f4xx_hal_gpio.o"
+"uygulama8hafta11\stm32f4xx_hal.o"
+"uygulama8hafta11\stm32f4xx_hal_dma.o"
+"uygulama8hafta11\stm32f4xx_hal_rcc_ex.o"
+"uygulama8hafta11\stm32f4xx_hal_adc.o"
+"uygulama8hafta11\stm32f4xx_hal_dma_ex.o"
+"uygulama8hafta11\stm32f4xx_hal_cortex.o"
+"uygulama8hafta11\stm32f4xx_hal_pwr_ex.o"
+"uygulama8hafta11\stm32f4xx_hal_flash_ramfunc.o"
+"uygulama8hafta11\main.o"
+"uygulama8hafta11\stm32f4xx_hal_msp.o"
+"uygulama8hafta11\stm32f4xx_it.o"
+"uygulama8hafta11\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "uygulama8Hafta11\uygulama8Hafta11.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "uygulama8Hafta11.map" -o uygulama8Hafta11\uygulama8Hafta11.axf

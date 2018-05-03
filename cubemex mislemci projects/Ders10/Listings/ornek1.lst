@@ -1,0 +1,89 @@
+
+
+
+ARM Macro Assembler    Page 1 Ders8AdressingMode
+
+
+    1 00000000                 TTL              Ders8AdressingMode
+    2 00000000                 AREA             Program, CODE
+    3 00000000                 ENTRY
+    4 00000000         
+    5 00000000         ;short array[] = new short[15];
+    6 00000000         ;int i;
+    7 00000000         ;for (i = 0; i < 15; i++) {
+    8 00000000         ;array[i] = (short) (i + 1);
+    9 00000000         ;System.out.printf("%d ", array[i]);
+   10 00000000         ;}
+   11 00000000         ;System.out.println("\n ");
+   12 00000000         
+   13 00000000         ;ornek 1: bir byte yazmak : 01 00 02 00..
+   14 00000000         ;LDR r1, =0x10000000  ; based address of array
+   15 00000000         ;MOV r2,#1 ; counter
+   16 00000000         ;devam
+   17 00000000         ;CMP r2,#15
+   18 00000000         ;BHI cik  ; higher 
+   19 00000000         ;STRH r2,[r1],#2
+   20 00000000         ;ADD r2,r2,#1
+   21 00000000         ;B devam
+   22 00000000         ;cik
+   23 00000000         
+   24 00000000         ;ornek2: 2byte yazmak :
+   25 00000000         
+   26 00000000 E3A01201        LDR              r1, =0x10000000 ; based address
+                                                             of array
+   27 00000004 E3A02001        MOV              r2,#1       ; counter
+   28 00000008 E59F4014        LDR              r4,=0xBFA   ;short u asmaz ç. s
+                                                            hort 2 byte(16 bit)
+                                                            (half word)(0x0BFA)
+                                                             bu da hatta 12 bit
+                                                            
+   29 0000000C         
+   30 0000000C         devam
+   31 0000000C E352000F        CMP              r2,#15
+   32 00000010 8A000002        BHI              cik         ; higher 
+   33 00000014 E0C140B2        STRH             r4,[r1],#2
+   34 00000018         ;ADD r2,r2,#1
+   35 00000018 E2844005        ADD              r4,r4,#5
+   36 0000001C         
+   37 0000001C EAFFFFFA        B                devam
+   38 00000020         cik
+   39 00000020 E3A01A01        LDR              r1, =0x00001000 ; based address
+                                                             of array
+   40 00000024                 END
+              00000BFA 
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\ornek1.d -o.\objects\ornek1.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM
+\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 
+524" --list=.\listings\ornek1.lst ornek1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Program 00000000
+
+Symbol: Program
+   Definitions
+      At line 2 in file ornek1.s
+   Uses
+      None
+Comment: Program unused
+cik 00000020
+
+Symbol: cik
+   Definitions
+      At line 38 in file ornek1.s
+   Uses
+      At line 32 in file ornek1.s
+Comment: cik used once
+devam 0000000C
+
+Symbol: devam
+   Definitions
+      At line 30 in file ornek1.s
+   Uses
+      At line 37 in file ornek1.s
+Comment: devam used once
+3 symbols
+337 symbols in table

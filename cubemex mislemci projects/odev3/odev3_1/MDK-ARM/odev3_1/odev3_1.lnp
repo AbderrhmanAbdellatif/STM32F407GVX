@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp
+"odev3_1\startup_stm32f407xx.o"
+"odev3_1\stm32f4xx_hal_adc.o"
+"odev3_1\stm32f4xx_hal_dma_ex.o"
+"odev3_1\stm32f4xx_hal_flash_ramfunc.o"
+"odev3_1\stm32f4xx_hal_tim_ex.o"
+"odev3_1\stm32f4xx_hal_pwr_ex.o"
+"odev3_1\stm32f4xx_hal.o"
+"odev3_1\stm32f4xx_hal_flash.o"
+"odev3_1\stm32f4xx_hal_tim.o"
+"odev3_1\stm32f4xx_hal_flash_ex.o"
+"odev3_1\stm32f4xx_hal_gpio.o"
+"odev3_1\stm32f4xx_hal_dma.o"
+"odev3_1\stm32f4xx_hal_pwr.o"
+"odev3_1\stm32f4xx_hal_rcc_ex.o"
+"odev3_1\stm32f4xx_hal_adc_ex.o"
+"odev3_1\stm32f4xx_hal_rcc.o"
+"odev3_1\stm32f4xx_hal_cortex.o"
+"odev3_1\system_stm32f4xx.o"
+"odev3_1\main.o"
+"odev3_1\stm32f4xx_hal_msp.o"
+"odev3_1\stm32f4xx_it.o"
+--library_type=microlib --strict --scatter "odev3_1\odev3_1.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "odev3_1.map" -o odev3_1\odev3_1.axf

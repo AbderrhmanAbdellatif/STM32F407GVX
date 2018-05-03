@@ -1,0 +1,61 @@
+
+
+
+ARM Macro Assembler    Page 1 Ders7
+
+
+    1 00000000                 TTL              Ders7
+    2 00000000                 AREA             Program, CODE, READONLY
+    3 00000000                 ENTRY
+    4 00000000         
+    5 00000000 E59F0014        LDR              r0,=0xAAAAAAA ;MOV 1 bytten dah
+                                                            a tasiyamaz
+    6 00000004 E3A01000        MOV              r1,#0       ;counter
+    7 00000008         basagit
+    8 00000008 E3510014        CMP              r1,#20      ;while(counter <20)
+                                                             
+    9 0000000C AA000002        BGE              bitir       ;{ bigger or eq 
+   10 00000010 E1B000A0        LSRS             r0,r0,#1    ;S flag guncellensi
+                                                            n
+   11 00000014 E2811001        ADD              r1,r1,#1
+   12 00000018 EAFFFFFA        B                basagit
+   13 0000001C         bitir
+   14 0000001C         
+   15 0000001C                 END
+              0AAAAAAA 
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\anad3.d -o.\objects\anad3.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\C
+MSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 52
+4" --list=.\listings\anad3.lst anad3.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Program 00000000
+
+Symbol: Program
+   Definitions
+      At line 2 in file anad3.s
+   Uses
+      None
+Comment: Program unused
+basagit 00000008
+
+Symbol: basagit
+   Definitions
+      At line 7 in file anad3.s
+   Uses
+      At line 12 in file anad3.s
+Comment: basagit used once
+bitir 0000001C
+
+Symbol: bitir
+   Definitions
+      At line 13 in file anad3.s
+   Uses
+      At line 9 in file anad3.s
+Comment: bitir used once
+3 symbols
+337 symbols in table

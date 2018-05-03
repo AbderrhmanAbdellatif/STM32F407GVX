@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp
+"odev2ma\startup_stm32f407xx.o"
+"odev2ma\main.o"
+"odev2ma\stm32f4xx_hal_msp.o"
+"odev2ma\stm32f4xx_it.o"
+"odev2ma\stm32f4xx_hal_flash_ramfunc.o"
+"odev2ma\stm32f4xx_hal_tim_ex.o"
+"odev2ma\stm32f4xx_hal_flash.o"
+"odev2ma\stm32f4xx_hal_pwr_ex.o"
+"odev2ma\stm32f4xx_hal_rcc.o"
+"odev2ma\stm32f4xx_hal.o"
+"odev2ma\stm32f4xx_hal_tim.o"
+"odev2ma\stm32f4xx_hal_gpio.o"
+"odev2ma\stm32f4xx_hal_rcc_ex.o"
+"odev2ma\stm32f4xx_hal_flash_ex.o"
+"odev2ma\stm32f4xx_hal_dma_ex.o"
+"odev2ma\stm32f4xx_hal_dma.o"
+"odev2ma\stm32f4xx_hal_pwr.o"
+"odev2ma\stm32f4xx_hal_cortex.o"
+"odev2ma\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "odev2ma\odev2ma.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "odev2ma.map" -o odev2ma\odev2ma.axf

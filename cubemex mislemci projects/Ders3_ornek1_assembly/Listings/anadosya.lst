@@ -1,0 +1,52 @@
+
+
+
+ARM Macro Assembler    Page 1 ders
+
+
+    1 00000000                 TTL              ders
+    2 00000000                 AREA             Program, CODE, READONLY
+    3 00000000                 ENTRY
+    4 00000000         
+    5 00000000 E3A0905A        MOV              r9,#2_01011010 ; comment:sayi1
+    6 00000004 E3A0A0B4        MOV              r10,#0xB4   ; immid. data tasim
+                                                            ada 250 den fazla t
+                                                            asiyamaz
+    7 00000008 E3A0B00F        MOV              r11,#15
+    8 0000000C E3A08038        MOV              r8,#56
+    9 00000010 E3A07000        MOV              r7,#0       ; toplam degiskeni
+   10 00000014 E0855009        ADD              r5,r5,r9
+   11 00000018 E085500A        ADD              r5,r5,r10
+   12 0000001C E085500B        ADD              r5,r5,r11
+   13 00000020 E0855008        ADD              r5,r5,r8
+   14 00000024 EAFFFFFE 
+                       stop    B                stop
+   15 00000028                 END
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\anadosya.d -o.\objects\anadosya.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5
+\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION S
+ETA 524" --list=.\listings\anadosya.lst anaDosya.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Program 00000000
+
+Symbol: Program
+   Definitions
+      At line 2 in file anaDosya.s
+   Uses
+      None
+Comment: Program unused
+stop 00000024
+
+Symbol: stop
+   Definitions
+      At line 14 in file anaDosya.s
+   Uses
+      At line 14 in file anaDosya.s
+Comment: stop used once
+2 symbols
+334 symbols in table

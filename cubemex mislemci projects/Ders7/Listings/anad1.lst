@@ -1,0 +1,70 @@
+
+
+
+ARM Macro Assembler    Page 1 Ders7
+
+
+    1 00000000                 TTL              Ders7
+    2 00000000                 AREA             Program, CODE ,READONLY
+    3 00000000                 ENTRY
+    4 00000000         
+    5 00000000 E3A00009        MOV              r0,#9       ;N! sayisi  
+    6 00000004 E3A01001        MOV              r1,#1       ;result 
+    7 00000008 E1A02000        MOV              r2,r0       ;temp =N
+    8 0000000C         basagit
+    9 0000000C E3520001        CMP              r2,#1       ;while(temp>1)
+   10 00000010 CA000000        BGT              wh1         ;eger r0 greater th
+                                                            an 1 -> go to wh1
+   11 00000014 EA000002        B                son         ;degilse ->  cik
+   12 00000018         
+   13 00000018         wh1
+   14 00000018 E0010192        MUL              r1,r2,r1    ; result= result*te
+                                                            mp
+   15 0000001C E2422001        SUB              r2,r2,#1    ;temp-- 
+   16 00000020 EAFFFFF9        B                basagit
+   17 00000024         son
+   18 00000024                 END
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\anad1.d -o.\objects\anad1.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\C
+MSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 52
+4" --list=.\listings\anad1.lst anad1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Program 00000000
+
+Symbol: Program
+   Definitions
+      At line 2 in file anad1.s
+   Uses
+      None
+Comment: Program unused
+basagit 0000000C
+
+Symbol: basagit
+   Definitions
+      At line 8 in file anad1.s
+   Uses
+      At line 16 in file anad1.s
+Comment: basagit used once
+son 00000024
+
+Symbol: son
+   Definitions
+      At line 17 in file anad1.s
+   Uses
+      At line 11 in file anad1.s
+Comment: son used once
+wh1 00000018
+
+Symbol: wh1
+   Definitions
+      At line 13 in file anad1.s
+   Uses
+      At line 10 in file anad1.s
+Comment: wh1 used once
+4 symbols
+336 symbols in table

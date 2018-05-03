@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp
+"motor1\startup_stm32f407xx.o"
+"motor1\system_stm32f4xx.o"
+"motor1\main.o"
+"motor1\stm32f4xx_hal_msp.o"
+"motor1\stm32f4xx_it.o"
+"motor1\stm32f4xx_hal_rcc_ex.o"
+"motor1\stm32f4xx_hal_flash.o"
+"motor1\stm32f4xx_hal_tim_ex.o"
+"motor1\stm32f4xx_hal_dma.o"
+"motor1\stm32f4xx_hal_gpio.o"
+"motor1\stm32f4xx_hal_dma_ex.o"
+"motor1\stm32f4xx_hal_cortex.o"
+"motor1\stm32f4xx_hal_tim.o"
+"motor1\stm32f4xx_hal.o"
+"motor1\stm32f4xx_hal_rcc.o"
+"motor1\stm32f4xx_hal_pwr_ex.o"
+"motor1\stm32f4xx_hal_pwr.o"
+"motor1\stm32f4xx_hal_flash_ex.o"
+"motor1\stm32f4xx_hal_flash_ramfunc.o"
+--library_type=microlib --strict --scatter "motor1\motor1.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "motor1.map" -o motor1\motor1.axf

@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp
+"uygulama3_potansiyometre\startup_stm32f407xx.o"
+"uygulama3_potansiyometre\main.o"
+"uygulama3_potansiyometre\stm32f4xx_it.o"
+"uygulama3_potansiyometre\stm32f4xx_hal_msp.o"
+"uygulama3_potansiyometre\system_stm32f4xx.o"
+"uygulama3_potansiyometre\stm32f4xx_hal_pwr.o"
+"uygulama3_potansiyometre\stm32f4xx_hal_rcc.o"
+"uygulama3_potansiyometre\stm32f4xx_hal_dma_ex.o"
+"uygulama3_potansiyometre\stm32f4xx_hal_rcc_ex.o"
+"uygulama3_potansiyometre\stm32f4xx_hal_pwr_ex.o"
+"uygulama3_potansiyometre\stm32f4xx_hal_tim_ex.o"
+"uygulama3_potansiyometre\stm32f4xx_hal_flash_ramfunc.o"
+"uygulama3_potansiyometre\stm32f4xx_hal_gpio.o"
+"uygulama3_potansiyometre\stm32f4xx_hal_adc.o"
+"uygulama3_potansiyometre\stm32f4xx_hal_cortex.o"
+"uygulama3_potansiyometre\stm32f4xx_hal_adc_ex.o"
+"uygulama3_potansiyometre\stm32f4xx_hal_dma.o"
+"uygulama3_potansiyometre\stm32f4xx_hal_flash_ex.o"
+"uygulama3_potansiyometre\stm32f4xx_hal_flash.o"
+"uygulama3_potansiyometre\stm32f4xx_hal.o"
+"uygulama3_potansiyometre\stm32f4xx_hal_tim.o"
+--library_type=microlib --strict --scatter "uygulama3_Potansiyometre\uygulama3_Potansiyometre.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "uygulama3_Potansiyometre.map" -o uygulama3_Potansiyometre\uygulama3_Potansiyometre.axf

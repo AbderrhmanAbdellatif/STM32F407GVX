@@ -1,0 +1,2 @@
+Dependencies for Project 'Ders7_soru3', Target 'Target 1': (DO NOT MODIFY !)
+F (.\anad4.s)(0x5AC858DC)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 524"--list .\listings\anad4.lst --xref -o .\objects\anad4.o --depend .\objects\anad4.d)

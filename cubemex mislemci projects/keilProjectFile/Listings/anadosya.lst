@@ -1,0 +1,35 @@
+
+
+
+ARM Macro Assembler    Page 1 Bitoperators
+
+
+    1 00000000                 TTL              Bitoperators
+    2 00000000                 AREA             program, CODE, READONLY
+    3 00000000                 ENTRY
+    4 00000000         
+    5 00000000         
+    6 00000000 E3A00103        LDR              r0, =0xC0000000
+    7 00000004 E3A01102        LDR              r1, =0x80000000
+    8 00000008 E0902001        ADDS             r2, r0,r1
+    9 0000000C                 END
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\anadosya.d -o.\objects\anadosya.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5
+\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION S
+ETA 524" --list=.\listings\anadosya.lst anadosya.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+program 00000000
+
+Symbol: program
+   Definitions
+      At line 2 in file anadosya.s
+   Uses
+      None
+Comment: program unused
+1 symbol
+333 symbols in table

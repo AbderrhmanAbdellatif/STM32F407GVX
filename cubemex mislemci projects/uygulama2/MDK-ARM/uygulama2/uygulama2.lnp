@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp
+"uygulama2\startup_stm32f407xx.o"
+"uygulama2\stm32f4xx_hal_rcc_ex.o"
+"uygulama2\stm32f4xx_hal_flash_ramfunc.o"
+"uygulama2\stm32f4xx_hal_dma.o"
+"uygulama2\stm32f4xx_hal_tim.o"
+"uygulama2\stm32f4xx_hal_pwr.o"
+"uygulama2\stm32f4xx_hal_cortex.o"
+"uygulama2\stm32f4xx_hal_pwr_ex.o"
+"uygulama2\stm32f4xx_hal_flash_ex.o"
+"uygulama2\stm32f4xx_hal_dma_ex.o"
+"uygulama2\stm32f4xx_hal_rcc.o"
+"uygulama2\stm32f4xx_hal_gpio.o"
+"uygulama2\stm32f4xx_hal_tim_ex.o"
+"uygulama2\stm32f4xx_hal.o"
+"uygulama2\stm32f4xx_hal_flash.o"
+"uygulama2\system_stm32f4xx.o"
+"uygulama2\stm32f4xx_hal_msp.o"
+"uygulama2\main.o"
+"uygulama2\stm32f4xx_it.o"
+--library_type=microlib --strict --scatter "uygulama2\uygulama2.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "uygulama2.map" -o uygulama2\uygulama2.axf
