@@ -9,11 +9,8 @@ void SystemClock_Config(void);
 
 	void ADC_IRQHandler(void)
 	{
-
 		adc_value=HAL_ADC_GetValue(&hadc1);
 		HAL_ADC_IRQHandler(&hadc1);
-
-		
 	}
 
 int main(void)

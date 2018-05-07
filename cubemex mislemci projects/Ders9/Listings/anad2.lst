@@ -14,20 +14,30 @@ ARM Macro Assembler    Page 1 ders9
     8 00000000         ;b[i]=(byte)(i+1);
     9 00000000         ;}
    10 00000000         
-   11 00000000 E3A01401        LDR              R1,=0X1000000 ; base adress of 
-                                                            byte array
-   12 00000004 E3A02001        MOV              r2,#1       ;count
-   13 00000008         loop
-   14 00000008 E3520015        CMP              r2,#21
-   15 0000000C AA000002        BGE              cik         ;greater or equal
-   16 00000010 E4C12001        STRB             r2,[r1],#1  ;birer birer artar 
-                                                            ç. byte
-   17 00000014 E2822001        ADD              r2,r2,#1
-   18 00000018 EAFFFFFA        B                loop
-   19 0000001C         cik
-   20 0000001C         
-   21 0000001C         
-   22 0000001C                 END
+   11 00000000 E3A01001        LDR              R1,=0X00000001 ; base adress of
+                                                             byte array
+   12 00000004         ;MOV r2,#1    ;count
+   13 00000004         ;loop 
+   14 00000004         ;CMP r2,#21
+   15 00000004         ;BGE cik     ;greater or equal
+   16 00000004         ;STRB r2,[r1],#1  ;birer birer artar ç. byte
+   17 00000004         ;ADD r2,r2,#1
+   18 00000004         ;B loop
+   19 00000004         ;cik 
+   20 00000004 E3A02001        MOV              r2,#1
+   21 00000008 E3A03002        MOV              r3,#2
+   22 0000000C E3A04000        MOV              r4,#0
+   23 00000010         loop
+   24 00000010 E352000A        CMP              r2,#10
+   25 00000014 AA000003        BGE              exit
+   26 00000018         ;STRH r3,[R1],#2
+   27 00000018         ;MUL r3,r2,r2
+   28 00000018 E4D14001        LDRB             r4,[R1],#1
+   29 0000001C E0844004        ADD              r4,r4
+   30 00000020 E2822001        ADD              r2,r2,#1
+   31 00000024 EAFFFFF9        B                loop
+   32 00000028         exit
+   33 00000028                 END
 Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
 bjects\anad2.d -o.\objects\anad2.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\C
 MSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 52
@@ -46,21 +56,21 @@ Symbol: PROGRAM
    Uses
       None
 Comment: PROGRAM unused
-cik 0000001C
+exit 00000028
 
-Symbol: cik
+Symbol: exit
    Definitions
-      At line 19 in file anad2.s
+      At line 32 in file anad2.s
    Uses
-      At line 15 in file anad2.s
-Comment: cik used once
-loop 00000008
+      At line 25 in file anad2.s
+Comment: exit used once
+loop 00000010
 
 Symbol: loop
    Definitions
-      At line 13 in file anad2.s
+      At line 23 in file anad2.s
    Uses
-      At line 18 in file anad2.s
+      At line 31 in file anad2.s
 Comment: loop used once
 3 symbols
 335 symbols in table
