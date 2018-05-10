@@ -8,8 +8,8 @@ ARM Macro Assembler    Page 1 Ders5
     2 00000000                 AREA             prog ,CODE, READONLY
     3 00000000                 ENTRY
     4 00000000         
-    5 00000000 E3A0001B        LDR              r0,=2_00011011
-    6 00000004 E3A010EF        LDR              r1,=2_11101111
+    5 00000000 E3A00207        LDR              r0,=0x70000000
+    6 00000004 E3A01203        LDR              r1,=0x30000000
     7 00000008 E0903001        ADDS             r3,r0,r1
     8 0000000C EAFFFFFE 
                        stop    B                stop

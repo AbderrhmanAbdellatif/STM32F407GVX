@@ -116,7 +116,7 @@ void USART2_IRQHandler(void)
 
 	}else{
 		HAL_GPIO_WritePin(GPIOD,yesil_Pin|kirmizi_Pin|turuncu_Pin|mavi_Pin,GPIO_PIN_SET);
-			for(int i=0;i<100000;i++);
+			for(int i=0;i<100000;i++){};
 				HAL_GPIO_WritePin(GPIOD,yesil_Pin|kirmizi_Pin|turuncu_Pin|mavi_Pin,GPIO_PIN_RESET);
 	}
 //	for(int i=0;i<10000;i++);
