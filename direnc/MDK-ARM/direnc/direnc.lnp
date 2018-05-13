@@ -1,0 +1,27 @@
+--cpu=Cortex-M4.fp
+"direnc\startup_stm32f407xx.o"
+"direnc\stm32f4xx_hal.o"
+"direnc\stm32f4xx_hal_gpio.o"
+"direnc\stm32f4xx_hal_rcc_ex.o"
+"direnc\stm32f4xx_hal_dma.o"
+"direnc\stm32f4xx_hal_cortex.o"
+"direnc\stm32f4xx_hal_dma_ex.o"
+"direnc\stm32f4xx_hal_pwr_ex.o"
+"direnc\stm32f4xx_hal_rcc.o"
+"direnc\stm32f4xx_hal_pwr.o"
+"direnc\stm32f4xx_hal_flash.o"
+"direnc\stm32f4xx_hal_flash_ex.o"
+"direnc\stm32f4xx_hal_flash_ramfunc.o"
+"direnc\stm32f4xx_hal_tim_ex.o"
+"direnc\stm32f4xx_hal_tim.o"
+"direnc\stm32f4xx_hal_adc_ex.o"
+"direnc\stm32f4xx_hal_adc.o"
+"direnc\stm_my_lcd16x2.o"
+"direnc\main.o"
+"direnc\stm32f4xx_hal_msp.o"
+"direnc\stm32f4xx_it.o"
+"direnc\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "direnc\direnc.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "direnc.map" -o direnc\direnc.axf
